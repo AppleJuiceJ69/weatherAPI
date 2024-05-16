@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- hamburger menu -->
+    <!-- <i class="fa-solid fa-bars"></i> -->
+    <nav>
+        <ul class="nav-header">
+        <li class="left1"><i class="fa-solid fa-bolt fa-2x lighting"></i></li>
+                <li class="left2 nav-children">Weather</li>
+                <li class="nav-children">Search</li>
+                <li class="nav-children">Contact</li>
+                <li class="nav-children">About</li>
+                <li class="nav-children">profile</li>
+            </li>
+            
+        </ul>
+    </nav>
+<main id="main-container">
+        
+        <div class="weather " > <i class="fa-solid fa-cloud fa-4x rain-cloud"></i> 
+        </div>
+    <div id="content-container">
+        <span class="weather temp weather-content"></span>
+        
+        <div class="weather conditions weather-main"></div>
+    <div id="max-min-container">
+        <span class="weather max weather-content">Max: </span>
+        <span class="weather min weather-content">Min: </span>
+        
+    </div>
+    
+    <form action="" class="input-container" name="name">
+        <input name=input type="text" placeholder="SEARCH CITY"  class="input" >
+        <button class="button" type="submit"><a href="cities.html"><i class="fa-brands fa-searchengin fa-2x"></i></a></a></button>
+       
+    </form>
+    <div id="bottom-container">
+    <div id="date-container">
+        <div class="weather date-children children1">Today</div>
+        <div class="weather date-children children2">July 21</div>
+    </div>
+    <br>
+    <hr>
+        <div class="location"></div>
+
+    <div id="humidity-container">
+        <span class="location humidity">Humidity: </span>
+        <span class="location humidity">%</span>
+    </div>
+    </div>
+</main>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
