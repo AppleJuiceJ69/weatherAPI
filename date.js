@@ -5,7 +5,7 @@ const date = new Date;
 
 let month = date.getMonth() + 1;
 let day = date.getDate();
-let weekDay = date.getUTCDay();
+let weekDay = date.getUTCDay()
 
 
 // why is the date api off.
@@ -69,11 +69,13 @@ switch(weekDay){
     case weekDay = 6:
         weekDay = 'Saturday'
         break;
-    case weekDay = 7:
+    case weekDay = 0:
         weekDay = 'Sunday'
-        break;
+       
 
 }
+
+
 // let lat/long - hawaii- 21.3099, -157.858093;
 // let lat/long -St. Augustine- 29.8922° N, 81.3139° W
 

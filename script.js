@@ -3,7 +3,8 @@ import { month, day,children1,children2,weekDay} from "./date.js";
 import {button, cities, cloud} from "./cities.js";
 
 
-
+// grab eleements for button
+const myButton = document.querySelector('#myButton')
 
 
 // this should automatically update
@@ -25,6 +26,7 @@ const getWeather = async function(){
 
           
         }
+        
     appendWeather()
 
     const changeWeatherIcon = () => {
@@ -50,7 +52,7 @@ const getWeather = async function(){
     
     
 }
-getWeather()
+// getWeather()
 
 
 
@@ -62,7 +64,6 @@ getWeather()
 // displays weather  on the console.
 children1.textContent = `${weekDay}`
 children2.textContent = `${month} ${day}`;
-
 
 
 

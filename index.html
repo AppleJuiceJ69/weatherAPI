@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -10,6 +11,7 @@
 <body>
     <!-- hamburger menu -->
     <!-- <i class="fa-solid fa-bars"></i> -->
+  
     <nav>
         <ul class="nav-header">
         <li class="left1"><i class="fa-solid fa-bolt fa-2x lighting"></i></li>
@@ -17,13 +19,15 @@
                 <li class="nav-children">Search</li>
                 <li class="nav-children">Contact</li>
                 <li class="nav-children">About</li>
-                <li class="nav-children">profile</li>
-            </li>
-            
+                <li class="nav-children">Profile</li>
+          
         </ul>
     </nav>
+
+    
+
 <main id="main-container">
-        
+    <button type="submit" value="Map" id="myButton" title="view Map"><a href="map.html">map</a></button>
         <div class="weather " > <i class="fa-solid fa-cloud fa-4x rain-cloud"></i> 
         </div>
     <div id="content-container">
@@ -50,12 +54,17 @@
     <hr>
         <div class="location"></div>
 
+        
     <div id="humidity-container">
+        
+        
         <span class="location humidity">Humidity: </span>
         <span class="location humidity">%</span>
     </div>
     </div>
 </main>
+
+
     <script type="module" src="script.js"></script>
 </body>
 </html>
