@@ -1,17 +1,38 @@
-import { temp, max, min, conditions, location, humidity } from './query.js';
+import { temp, max, min, conditions, location, humidity, hiddenChildren, hiddenMenu, hamburger} from './query.js';
 import { month, day,children1,children2,weekDay} from "./date.js";
 import {button, cities, cloud} from "./cities.js";
 
+
+// backend that stores fake users.
 
 // grab eleements for button
 const myButton = document.querySelector('#myButton')
 
 
-// this should automatically update
+
+// Note- use the parent instead to add event listener.
+// // open and close hidden menu.
+hiddenMenu[0].addEventListener('mouseenter',()=>{
+    hiddenChildren.forEach((item)=>{
+        item.style.display = 'block'
+    })
+    // animates the hamburger menu.
+    hamburger.className = 'fa-solid fa-bounce fa-bars fa-2x'
+   
+})
+hiddenMenu[0].addEventListener('mouseleave',()=>{
+    hiddenChildren.forEach((item)=>{
+        item.style.display = 'none'
+    })
+    // stops hamburger menu on exit.
+    hamburger.className = 'fa-solid  fa-bars fa-2x'
+})
+
+// Fetching the weather
 
 const getWeather = async function(){
     try{
-        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cities.lat}&lon=${cities.lon}&units=imperial&limit=1&appid=093b727f95640635e5f1e12e68f3685a`);
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cities.honolulu.lat}&lon=${cities.honolulu.lon}&units=imperial&limit=1&appid=093b727f95640635e5f1e12e68f3685a`);
         let data = await response.json(response);
        console.log(data);
 
@@ -29,12 +50,16 @@ const getWeather = async function(){
         
     appendWeather()
 
+        // changes weather icon when we get weather.
     const changeWeatherIcon = () => {
             if (data.weather[0].main === "Rain") {
                 cloud.className = "fa-solid fa-cloud-rain fa-4x";
             }
             else if (data.weather[0].main === "light rain" || data.weather[0].main === "Mist")
                 cloud.className = "fa-light fa-cloud-rain fa-4x";
+            else if(data.weather[0].main === "sunny"){
+                cloud.className = "fa-solid fa-sun";
+            }
             else {
                 cloud.className = cloud.className;
             }
@@ -52,7 +77,7 @@ const getWeather = async function(){
     
     
 }
-// getWeather()
+getWeather()
 
 
 

@@ -14,7 +14,8 @@ body{
     position: relative;
 }
 #map{
-  height: 97vh;
+  height: 93vh;
+  
     
 }
 
@@ -24,23 +25,58 @@ button{
     color: white;
     cursor: pointer;
 }
+
 .nav-header{
     display: flex;
+    
     list-style-type: none;
     justify-content: end;
     flex-wrap: wrap;
     position: relative;
     background: rgba(45, 37, 37, 0.9);
     box-shadow: .01rem .01rem .5rem .01rem black;
-    z-index: -1;
+    padding: 0rem .25rem;
+    min-height: 3.5rem;
+ 
 }
 
-.nav-children{
+
+.nav-header > .nav-children{
     padding: 1rem 1rem;
     color: white;
 }
 .nav-children:hover{
-   color: blue;
+    background: white;
+    border: 1px solid black;
+    border-radius: .5rem;
+    color: black;
+    cursor: pointer;
+    max-height: 3.15rem;
+    
+    
+}
+
+#hidden-menu{
+   display: flex;
+   position: absolute;
+    top: 3rem;
+   flex-direction: column;
+   padding: 1rem 0rem;
+   background: rgba(45, 37, 37, 0.9);
+   box-shadow: .01rem .01rem .5rem .01rem black;
+   /* makes the hamburger icons show up. */
+   z-index: 500
+}
+.hidden-children{
+padding: .5rem;
+font-size: 1.1rem;
+color: white;
+cursor: pointer;
+display: none;
+}
+.hidden-children:hover{
+    background: white;
+    color: black;
 }
 
 .left1{
@@ -48,9 +84,17 @@ button{
     left: 3rem;
     top: -2rem;
 }
- i.lighting{
+ i.lighting, i.fa-bars{
    color: white;
   
+}
+
+.right1{
+    position: absolute;
+    right: 1rem;
+    top: -5rem;
+    display: none;
+   
 }
 
 
@@ -58,6 +102,13 @@ button{
     position: absolute;
    left: 5rem;
    color: white;
+}
+.left2:hover{
+    position: absolute;
+   left: 5rem;
+    background: none;
+    border: none;
+    color: white;
 }
 .input{
     padding: 1rem;
@@ -106,6 +157,7 @@ input::placeholder{
 #date-container{
     display: flex;
     justify-content: space-around;
+    
 }
 #content-container{
     text-align: center;
@@ -128,7 +180,7 @@ button a{
 
 .location{
     text-align: center;
-    margin-top: 2rem;
+    
     font-size: 1.2rem;
     color: white;
     
@@ -136,7 +188,7 @@ button a{
 
 #humidity-container{
     text-align: center;
-    
+    padding: 1rem;
 }
 
 .weather-content-deg{
@@ -145,7 +197,7 @@ button a{
     
 }
 #bottom-container{
-    height: 10.5rem;
+    height: 10rem;
     background: linear-gradient(45deg, rgb(30, 30, 199), purple);
     transform: rotateX('20deg');
     border-radius: 1rem;
@@ -167,6 +219,23 @@ button a{
 }
 
 #myButton, a{
-    color: rebeccapurple;
+    color: orangered;
     text-decoration: none;
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width: 600px){
+   .nav-children{
+
+    display: none;
+   }
+   .right1{
+    display: block;
+   }
+   .left2{
+    display: block;
+   }
 }

@@ -1,4 +1,4 @@
-import { temp, max, min, conditions, location, humidity } from './query.js';
+
 const cloud = document.querySelector('.rain-cloud')
 const weather = document.querySelector('.weather')
 const input = document.querySelector('input')
