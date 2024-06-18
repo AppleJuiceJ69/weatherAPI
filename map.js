@@ -3,7 +3,7 @@
 import { temp, max, min, conditions, location, humidity, hiddenChildren, hiddenMenu, hamburger} from './query.js';
 import {button, cities, cloud} from "./cities.js";
 
-let map =  L.map('map').setView([cities.honolulu.lat,cities.honolulu.lon], 13);
+let map =  L.map('map').setView([cities.petaluma.lat3,cities.petaluma.lon3], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 13,

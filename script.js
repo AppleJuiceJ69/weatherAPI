@@ -32,7 +32,7 @@ hiddenMenu[0].addEventListener('mouseleave',()=>{
 
 const getWeather = async function(){
     try{
-        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cities.honolulu.lat}&lon=${cities.honolulu.lon}&units=imperial&limit=1&appid=093b727f95640635e5f1e12e68f3685a`);
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cities.petaluma.lat3}&lon=${cities.petaluma.lon3}&units=imperial&limit=1&appid=093b727f95640635e5f1e12e68f3685a`);
         let data = await response.json(response);
        console.log(data);
 
